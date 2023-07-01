@@ -31,19 +31,19 @@ const Navbar = () => {
             </Link>
           </ul>
         </div>
-        <div className="flex justify-center items-center md:hidden min-h-[400px]">
+        <div className={`flex justify-center items-center md:hidden ${openNav ? "min-h-[300px] right-0 top-0 left-0" : "right-1"} absolute right-1`}>
           <div
-            className=" bg-bg rounded-[50%] w-[35px] h-[35px] absolute cursor-pointer z-40"
+            className={`bg-bg rounded-[50%] w-[35px] h-[35px] right-3 absolute cursor-pointer z-40 ${openNav ? "hidden" : ""}`}
             onClick={() => setOpenNav(true)}
           ></div>
           <div
-            className={`naviopen z-30 w-[35px] h-[35px] fill-mode-forwards bg-yellow-500 overflow-hidden absolute ${
+            className={`${openNav ? "flex" : "hidden"} z-30 w-[35px] h-[35px] fill-mode-forwards bg-bg text-white text-[16px] overflow-hidden absolute ${
               openNav && "animate-nav-expand"
             }`}
           >
-            <img src={img} alt="" />
-            <div className="grid grid-flow-col">
-              <Link to="/work">
+            {/* <img src={img} alt="" /> */}
+            <div className="grid grid-flow-row space-y-10 p-5">
+              <Link className="cursor-pointer border-b-[1px] pb-2 w-full" to="/work">
                 Work
                 <span
                   className={`hidden ${
@@ -53,9 +53,9 @@ const Navbar = () => {
                   Coming Soon...
                 </span>
               </Link>
-              <Link to="/about">About Us </Link>
-              <Link to="/contact">Contact Us </Link>
-              <Link to="">Community</Link>
+              <Link className="cursor-pointer border-b-[1px] pb-2 w-full" to="/about">About Us </Link>
+              <Link className="cursor-pointer border-b-[1px] pb-2 w-full" to="/contact">Contact Us </Link>
+              <Link className="cursor-pointer w-full" to="">Community</Link>
             </div>
           </div>
         </div>
