@@ -34,7 +34,7 @@ const Navbar = () => {
         <div className={`flex justify-center items-center md:hidden ${openNav ? "min-h-[300px] right-0 top-0 left-0" : "right-1"} absolute right-1`}>
           <div
             className={`bg-bg rounded-[50%] w-[35px] h-[35px] right-3 absolute cursor-pointer z-40 ${openNav ? "hidden" : ""}`}
-            onClick={() => setOpenNav(true)}
+            // onClick={() => setOpenNav(true)}
           ></div>
           <div
             className={`${openNav ? "flex" : "hidden"} z-30 w-[35px] h-[35px] fill-mode-forwards bg-bg text-white text-[16px] overflow-hidden absolute ${
