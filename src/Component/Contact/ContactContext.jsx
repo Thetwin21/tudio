@@ -4,7 +4,7 @@ import ContactMap from './ContactMap'
 const ContactContext = () => {
   return (
     <div>
-      <ContactMap />
+      {/* <ContactMap /> */}
     </div>
   )
 }
